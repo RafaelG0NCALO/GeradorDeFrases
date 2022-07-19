@@ -11,9 +11,9 @@ function randomFrase(){
     fraseBtn.classList.add("loading")
 
     //buscando citações aleatórias da api e analisando em objeto javascript
-    fetch("https://allugofrases.herokuapp.com/frases/random").then(res => res.json()).then(result => {
-        fraseTexto.innerText = result.frase
-        autorNome.innerText = result.autor
+    fetch("http://api.quotable.io/random").then(res => res.json()).then(result => {
+        fraseTexto.innerText = result.content
+        autorNome.innerText = result.author
         fraseBtn.innerText = "Nova frase"
         fraseBtn.classList.remove("loading")
     })
