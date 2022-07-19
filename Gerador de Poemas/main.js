@@ -11,7 +11,7 @@ function randomFrase(){
     fraseBtn.classList.add("loading")
 
     //buscando citações aleatórias da api e analisando em objeto javascript
-    fetch("http://api.quotable.io/random").then(res => res.json()).then(result => {
+    fetch("https://api.quotable.io/random").then(res => res.json()).then(result => {
         fraseTexto.innerText = result.content
         autorNome.innerText = result.author
         fraseBtn.innerText = "Nova frase"
